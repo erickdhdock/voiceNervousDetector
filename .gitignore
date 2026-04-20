@@ -1,0 +1,21 @@
+node_modules/
+dist_electron/
+frontend_dist/
+.DS_Store
+*.icns
+cache/
+Bank/peripheral/*
+
+# secrets
+.env
+
+# python
+__pycache__/
+.pytest_cache/
+*.egg-info/
+
+# per-user state + machine-local derived caches
+backend/Bank/peripheral/
+backend/cache/
+
+sample/
