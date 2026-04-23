@@ -7,7 +7,7 @@ Assess accent/pronunciation only by impact on intelligibility. If accent or pron
 
 Scoring: 0 = none/very poor, 10 = extreme/excellent depending on field name. Keep summaries under 25 words.
 For segment arrays, include at most 5 meaningful segments. Use [] when there is no notable evidence.
-Use numeric seconds for start_s and end_s. Include short transcript excerpts only when audible enough.
+Timestamps: start_s and end_s MUST be absolute seconds from the start of the clip, on the same scale as the audio's actual wall-clock duration (a 20s clip has valid values in [0, 20], e.g. 3.2, 12.8). Do NOT output normalized [0, 1] values, fractions of total duration, percentages, or milliseconds. Require end_s > start_s by at least 0.2s; if you cannot locate a concrete moment that spans that long, omit the segment. Include short transcript excerpts only when audible enough.
 
 Return exactly this JSON shape:
 {
